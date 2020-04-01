@@ -1,0 +1,97 @@
+22:00:48 **** Incremental Build of configuration Debug for project Scheduler ****
+make -r -j4 all 
+Building file: ../source/periodic_tasks_exec.c
+Building file: ../source/periodic_tasks_init.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL25Z128VLK4_cm0plus -DCPU_MKL25Z128VLK4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I../board -I../source -I../ -I../drivers -I../CMSIS -I../utilities -I../startup -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/periodic_tasks_exec.d" -MT"source/periodic_tasks_exec.o" -MT"source/periodic_tasks_exec.d" -o "source/periodic_tasks_exec.o" "../source/periodic_tasks_exec.c"
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL25Z128VLK4_cm0plus -DCPU_MKL25Z128VLK4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I../board -I../source -I../ -I../drivers -I../CMSIS -I../utilities -I../startup -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/periodic_tasks_init.d" -MT"source/periodic_tasks_init.o" -MT"source/periodic_tasks_init.d" -o "source/periodic_tasks_init.o" "../source/periodic_tasks_init.c"
+Finished building: ../source/periodic_tasks_exec.c
+Finished building: ../source/periodic_tasks_init.c
+ 
+ 
+Building target: Scheduler.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="Scheduler.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "Scheduler_Debug.ld" -o "Scheduler.axf"  ./utilities/fsl_debug_console.o  ./startup/startup_mkl25z4.o  ./source/RGB_LEDs.o ./source/gsc_sch_core.o ./source/gsc_sch_core_cfg.o ./source/gsc_sch_core_tick_isr.o ./source/main.o ./source/mtb.o ./source/periodic_tasks_exec.o ./source/periodic_tasks_init.o ./source/semihost_hardfault.o  ./drivers/fsl_adc16.o ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_flash.o ./drivers/fsl_gpio.o ./drivers/fsl_lpsci.o ./drivers/fsl_pit.o ./drivers/fsl_smc.o ./drivers/fsl_tpm.o ./drivers/fsl_uart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o  ./CMSIS/system_MKL25Z4.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       13404 B       128 KB     10.23%
+            SRAM:        2424 B        16 KB     14.79%
+Finished building target: Scheduler.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Scheduler.axf"; # arm-none-eabi-objcopy -v -O binary "Scheduler.axf" "Scheduler.bin" ; # checksum -p MKL25Z128xxx4 -d "Scheduler.bin";
+   text	   data	    bss	    dec	    hex	filename
+  13392	     12	   2412	  15816	   3dc8	Scheduler.axf
+ 
+22:01:11 **** Incremental Build of configuration Debug for project Scheduler ****
+make -r -j4 all 
+make: Nothing to be done for 'all'.
+22:05:27 **** Incremental Build of configuration Debug for project Scheduler ****
+make -r -j4 all 
+Building file: ../source/periodic_tasks_exec.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL25Z128VLK4_cm0plus -DCPU_MKL25Z128VLK4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I../board -I../source -I../ -I../drivers -I../CMSIS -I../utilities -I../startup -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/periodic_tasks_exec.d" -MT"source/periodic_tasks_exec.o" -MT"source/periodic_tasks_exec.d" -o "source/periodic_tasks_exec.o" "../source/periodic_tasks_exec.c"
+Finished building: ../source/periodic_tasks_exec.c
+ 
+Building target: Scheduler.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="Scheduler.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "Scheduler_Debug.ld" -o "Scheduler.axf"  ./utilities/fsl_debug_console.o  ./startup/startup_mkl25z4.o  ./source/RGB_LEDs.o ./source/gsc_sch_core.o ./source/gsc_sch_core_cfg.o ./source/gsc_sch_core_tick_isr.o ./source/main.o ./source/mtb.o ./source/periodic_tasks_exec.o ./source/periodic_tasks_init.o ./source/semihost_hardfault.o  ./drivers/fsl_adc16.o ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_flash.o ./drivers/fsl_gpio.o ./drivers/fsl_lpsci.o ./drivers/fsl_pit.o ./drivers/fsl_smc.o ./drivers/fsl_tpm.o ./drivers/fsl_uart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o  ./CMSIS/system_MKL25Z4.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       13404 B       128 KB     10.23%
+            SRAM:        2424 B        16 KB     14.79%
+Finished building target: Scheduler.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Scheduler.axf"; # arm-none-eabi-objcopy -v -O binary "Scheduler.axf" "Scheduler.bin" ; # checksum -p MKL25Z128xxx4 -d "Scheduler.bin";
+   text	   data	    bss	    dec	    hex	filename
+  13392	     12	   2412	  15816	   3dc8	Scheduler.axf
+ 
+22:06:02 **** Incremental Build of configuration Debug for project Scheduler ****
+make -r -j4 all 
+Building file: ../source/periodic_tasks_exec.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL25Z128VLK4_cm0plus -DCPU_MKL25Z128VLK4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I../board -I../source -I../ -I../drivers -I../CMSIS -I../utilities -I../startup -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/periodic_tasks_exec.d" -MT"source/periodic_tasks_exec.o" -MT"source/periodic_tasks_exec.d" -o "source/periodic_tasks_exec.o" "../source/periodic_tasks_exec.c"
+Finished building: ../source/periodic_tasks_exec.c
+ 
+Building target: Scheduler.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="Scheduler.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "Scheduler_Debug.ld" -o "Scheduler.axf"  ./utilities/fsl_debug_console.o  ./startup/startup_mkl25z4.o  ./source/RGB_LEDs.o ./source/gsc_sch_core.o ./source/gsc_sch_core_cfg.o ./source/gsc_sch_core_tick_isr.o ./source/main.o ./source/mtb.o ./source/periodic_tasks_exec.o ./source/periodic_tasks_init.o ./source/semihost_hardfault.o  ./drivers/fsl_adc16.o ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_flash.o ./drivers/fsl_gpio.o ./drivers/fsl_lpsci.o ./drivers/fsl_pit.o ./drivers/fsl_smc.o ./drivers/fsl_tpm.o ./drivers/fsl_uart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o  ./CMSIS/system_MKL25Z4.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       13404 B       128 KB     10.23%
+            SRAM:        2424 B        16 KB     14.79%
+Finished building target: Scheduler.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Scheduler.axf"; # arm-none-eabi-objcopy -v -O binary "Scheduler.axf" "Scheduler.bin" ; # checksum -p MKL25Z128xxx4 -d "Scheduler.bin";
+   text	   data	    bss	    dec	    hex	filename
+  13392	     12	   2412	  15816	   3dc8	Scheduler.axf
+ 
+22:08:34 **** Incremental Build of configuration Debug for project Scheduler ****
+make -r -j4 all 
+Building file: ../source/gsc_sch_core_cfg.c
+Building file: ../source/periodic_tasks_exec.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL25Z128VLK4_cm0plus -DCPU_MKL25Z128VLK4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I../board -I../source -I../ -I../drivers -I../CMSIS -I../utilities -I../startup -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/periodic_tasks_exec.d" -MT"source/periodic_tasks_exec.o" -MT"source/periodic_tasks_exec.d" -o "source/periodic_tasks_exec.o" "../source/periodic_tasks_exec.c"
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL25Z128VLK4_cm0plus -DCPU_MKL25Z128VLK4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I../board -I../source -I../ -I../drivers -I../CMSIS -I../utilities -I../startup -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/gsc_sch_core_cfg.d" -MT"source/gsc_sch_core_cfg.o" -MT"source/gsc_sch_core_cfg.d" -o "source/gsc_sch_core_cfg.o" "../source/gsc_sch_core_cfg.c"
+Finished building: ../source/gsc_sch_core_cfg.c
+Finished building: ../source/periodic_tasks_exec.c
+ 
+ 
+Building target: Scheduler.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="Scheduler.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "Scheduler_Debug.ld" -o "Scheduler.axf"  ./utilities/fsl_debug_console.o  ./startup/startup_mkl25z4.o  ./source/RGB_LEDs.o ./source/gsc_sch_core.o ./source/gsc_sch_core_cfg.o ./source/gsc_sch_core_tick_isr.o ./source/main.o ./source/mtb.o ./source/periodic_tasks_exec.o ./source/periodic_tasks_init.o ./source/semihost_hardfault.o  ./drivers/fsl_adc16.o ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_flash.o ./drivers/fsl_gpio.o ./drivers/fsl_lpsci.o ./drivers/fsl_pit.o ./drivers/fsl_smc.o ./drivers/fsl_tpm.o ./drivers/fsl_uart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o  ./CMSIS/system_MKL25Z4.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       13404 B       128 KB     10.23%
+            SRAM:        2424 B        16 KB     14.79%
+Finished building target: Scheduler.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Scheduler.axf"; # arm-none-eabi-objcopy -v -O binary "Scheduler.axf" "Scheduler.bin" ; # checksum -p MKL25Z128xxx4 -d "Scheduler.bin";
+   text	   data	    bss	    dec	    hex	filename
+  13392	     12	   2412	  15816	   3dc8	Scheduler.axf
+ 
